@@ -123,7 +123,15 @@ class Button extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(8),
           child: Center(
-            child: Text(value),
+            child: Text(
+              value,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  color: this.color == null
+                      ? Theme.of(context).colorScheme.onPrimary
+                      : null),
+            ),
           ),
         ),
       ),
